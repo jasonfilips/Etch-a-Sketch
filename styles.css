@@ -1,6 +1,24 @@
 #container {
     display: flex;
     flex-direction: column;
+    width: 50vw;
+    height: auto;
+    background-color: red;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    background-color: blue;
+}
+
+.item{
+    height: 30px;
+    width: 30px;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    
 }
 
 div {
