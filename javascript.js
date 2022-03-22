@@ -1,5 +1,7 @@
 const container = document.getElementById('container');
-let gridSize = 32;
+const slider = document.getElementById("size");
+const output = document.getElementById("outputSize");
+let gridSize = 16;
 let cellsize = 0;
 
 //Creates the grid of specific square size
@@ -24,7 +26,6 @@ function createGrid(gridSize){
     }
 }
 
-
 const resetButton = document.getElementById('reset');
 resetButton.addEventListener("click",reset);
 
@@ -35,13 +36,14 @@ function draw(e){
     e.target.style.backgroundColor = 'white';
 }
 
-//resets all of the squares back to the color gray
+//delete the old grid and make a new one with the set grid size
 function reset(e){
     const items = document.querySelectorAll('.item');
-    for( let i = 0; i < items.length; i++)
-    {
-        items[i].style.backgroundColor = "gray";
+    while (container.firstChild){
+        container.removeChild(container.firstChild);
     }
+    gridSize = slider.value;
+    createGrid(gridSize);
 }
 
 
