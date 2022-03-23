@@ -95,6 +95,10 @@ body {
     width: 15vw;
 }
 
+#reset:active, #default:active, #rainbow:active{
+    background-color: gray;
+}
+
 #outputSize{
     font-size: 25px;
 }
