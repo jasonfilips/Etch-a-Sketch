@@ -17,7 +17,7 @@ function createGrid(gridSize){
         let row = document.createElement('div');
         row.classList.add('row');
         row.style.cssText = "display: flex; flex-direction: row;"
-        cellsize = (600-gridSize)/gridSize;
+        cellsize = (600-(gridSize*2))/gridSize;
 
         container.appendChild(row);
 
